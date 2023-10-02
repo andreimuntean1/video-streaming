@@ -6,21 +6,21 @@ import Brightness7 from "@mui/icons-material/Brightness7";
 import Brightness4 from "@mui/icons-material/Brightness4";
 
 export default function Header() {
-  const theme = useTheme()
-  const colorMode = useContext(ColorContext)
+  const theme = useTheme();
+  const colorMode = useContext(ColorContext);
 
   return (
-    <AppBar position="static" enableColorOnDark>
-      <Toolbar variant="regular" sx={{display: 'flex', justifyContent: 'space-between'}}>
+    <AppBar position="static">
+      <Toolbar variant="regular" sx={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant="h6" color="inherit" component="div">
-          <Link to='/' style={{ color: 'white', textDecoration: 'none' }}>
-            JWFLIX
+          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+            Video Streaming
           </Link>
         </Typography>
         <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-          {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+          {theme.palette.mode === "dark" ? <Brightness7 /> : <Brightness4 />}
         </IconButton>
       </Toolbar>
     </AppBar>
-  )
+  );
 }
